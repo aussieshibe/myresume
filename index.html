@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>@nicknelson.io</title>
+	<link rel="stylesheet" href="./styles/desktop.css">
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="screen">
+
+		<!-- Top Panel -->
+		<div class="panel">
+			<div class="panelLeft">
+				<p class="titleText panelAppNameText"></p>
+			</div>
+			<div class="panelRight">
+				<div class="panelPowerButton"></div>
+				<div class="panelClock"><p id="panelClockText" class="panelClockText">--:-- --</p></div>
+			</div>
+		</div>
+		<!-- End Top Panel -->
+
+		<!-- Launcher -->
+		<div class="launcher">
+			<div class="launcherButton launcherMainButton"></div>
+			<div id="launcherHelpButton" class="launcherButton"></div>
+		</div>
+		<!-- End Launcher -->
+
+		<!-- Window Container -->
+		<div class="windowContainer">
+			<div class="window pdfViewerWindow">
+
+				<div class="windowHeader">
+					<span class="headerButton headerClose"></span>
+					<span class="headerButton headerMin"></span>
+					<span class="headerButton headerMax"></span>
+					<span class="headerText titleText">About nicknelson.io</span>
+				</div>
+				<div class="windowContents iframeContainer">
+					<iframe src="http://docs.google.com/gview?url=http://nicknelson.io/pages/resume.pdf&embedded=true" frameborder="0">
+						<p><a href="./pages/resume.pdf">
+							Your browser does not support iframes, please click here to view my resume.
+						</a></p>
+					</iframe>
+				</div>
+				<div class="windowStatusBar">
+					<p class="windowStatusBarText">Loaded resume.pdf</p>
+				</div>
+			</div>
+		</div>
+		<!-- End Window Container -->
+
+	</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="./scripts/desktop.js"></script>
+</html>

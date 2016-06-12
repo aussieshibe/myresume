@@ -1,0 +1,217 @@
+html,
+body,
+#screen {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Screen */
+
+#screen{
+	background-color: rgb(240,240,255);
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+}
+
+/* End Screen */
+
+/* Panel Stuff */
+
+.panel{
+	height: 24px;
+	background-color: rgb(100,100,100);
+	background-image: url("../images/panelSlice.png");
+	box-shadow: 0px 3px 10px 0px;
+	overflow: hidden;
+	width: 100%;
+
+	position: relative;
+
+	z-index: 100;
+
+}
+
+.panelAppNameText{
+	margin: 3px;
+	margin-left: 8px;
+}
+
+.panelLeft{
+	position: absolute;
+	left: 0px;
+}
+
+.panelRight{
+	position: absolute;
+	right: 0px;
+}
+
+.panelClock{
+	float:right;
+}
+
+.panelClockText{
+	color: rgb(240,240,240);
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 11pt;
+	margin: 3px;
+}
+
+.panelPowerButton{
+	float: right;
+	background-image: url("../images/panelPower.png");
+	width: 32px;
+	height: 24px;
+}
+
+/* End Panel Stuff */
+
+/* Launcher Stuff */
+
+.launcher{
+	position: absolute;
+	top: 24px;
+	bottom: 0px;
+	width: 64px;
+
+	background-color: rgba(80,70,90,0.5);
+
+	border: 0px;
+	border-right-width: 2px;
+	border-color: rgba(255,255,255,0.1);
+	border-style: solid;
+
+	z-index: 15;
+}
+
+.launcherButton{
+	width: 52px;
+	height: 52px;
+	margin: 6px;
+	border-radius: 5px;
+}
+
+.launcherMainButton{
+	background-image: url("../images/launcherButton.png");
+}
+
+#launcherHelpButton{
+	background-image: url("../images/launcherHelp.png");
+}
+
+/* End Launcher Stuff */
+
+
+/* Window Stuff */
+
+.windowContainer{
+	position: absolute;
+	top: 24px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+.window {
+	background-color: rgba(0,0,0,0.22);
+	box-shadow: 0px 3px 30px 0px;
+
+	min-width: 300px;
+	min-height: 48px;
+
+	width: 60%;
+	height: 85%;
+
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	
+	z-index: 20;
+}
+
+.windowHeader{
+
+	background-color: rgb(100,100,100);
+	background-image: url("../images/headerSlice.png");
+
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+
+	height: 18px;
+	padding: 5px;
+}
+
+.windowContents{
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin-top: 28px;
+	margin-bottom: 0px;
+	background-color: rgb(255,255,255);
+}
+
+.headerButton{
+	width: 17px;
+	height: 17px;
+	float: left;
+	margin: 0px;
+	margin-right: 2px;
+}
+
+.headerClose{
+	background-image: url("../images/closeButton.png");
+}
+
+.headerMin{
+	background-image: url("../images/minButton.png");
+}
+
+.headerMax{
+	background-image: url("../images/maxButton.png");
+}
+
+.headerText{
+	margin-left: 10px;
+}
+
+.windowStatusBar{
+	position: absolute;
+	bottom: 0px;
+	height: 20px;
+	width: 100%;
+	background-image: url("../images/windowStatusBarSlice.png");
+}
+
+.windowStatusBarText{
+	color: rgb(240,240,240);
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+	font-size: 9pt;
+	margin: 3px;
+}
+
+/* End Window Stuff */
+
+.titleText{
+	color: rgb(240,240,240);
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+	font-size: 11pt;
+}
+
+iframe{
+	height: 100%;
+	width: 100%;
+
+}
+
+.iframeContainer{
+	padding-bottom:20px;
+}
