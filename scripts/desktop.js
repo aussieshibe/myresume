@@ -29,7 +29,7 @@ function createPDFViewerWindow(windowVars){
 			initWindows();
 		});
 	}).fail(function(){
-		console.log("Loading PDFViewer window from server failed.");
+		console.log("Loading PDFViewer window from server failed. Are you running locally?");
 	});
 }
 
@@ -61,6 +61,12 @@ function initWindows(){
 			stop: function(event, ui) {
 				$('iframe').css('pointer-events','auto');
 			}
+		});
+	});
+
+	$( ".headerClose" ).each(function(index){
+		$(this).click(function(evt){
+			$(this).closest( ".windowContainer" ).remove();
 		});
 	});
 
