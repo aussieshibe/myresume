@@ -84,7 +84,7 @@ body,
 	border-color: rgba(255,255,255,0.1);
 	border-style: solid;
 
-	z-index: 15;
+	z-index: 1500;
 }
 
 .launcherButton{
@@ -129,8 +129,6 @@ body,
 	position: absolute;
 	top: 100px;
 	left: 200px;
-	
-	z-index: 20;
 }
 
 .windowHeader{
