@@ -11,6 +11,8 @@ $(document).ready(function(){
 		createWindow("PDFViewer", {url: "../pages/resume.pdf"});
 	});
 
+	createWindow("PDFViewer");
+
 });
 
 function createWindow(windowType, windowVars){
