@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 10%">
+        <h2>Javascript Brainfuck Interpreter</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="six columns">
+            <h5>Program</h5>
+            <textarea id="bfProgram" wrap="hard" class="u-full-width">++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.</textarea>
+        </div>
+        <div class="six columns">
+            <h5>Memory State</h5>
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th id="memO-label-0">0</th>
+                        <th id="memO-label-1">1</th>
+                        <th id="memO-label-2">2</th>
+                        <th id="memO-label-3">3</th>
+                        <th id="memO-label-4">4</th>
+                        <th id="memO-label-5">5</th>
+                        <th id="memO-label-6">6</th>
+                        <th id="memO-label-7">7</th>
+                        <th id="memO-label-8">8</th>
+                        <th id="memO-label-9">9</th>
+                        <th id="memO-label-10">10</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="memO-data-0">0</td>
+                        <td id="memO-data-1">0</td>
+                        <td id="memO-data-2">0</td>
+                        <td id="memO-data-3">0</td>
+                        <td id="memO-data-4">0</td>
+                        <td id="memO-data-5">0</td>
+                        <td id="memO-data-6">0</td>
+                        <td id="memO-data-7">0</td>
+                        <td id="memO-data-8">0</td>
+                        <td id="memO-data-9">0</td>
+                        <td id="memO-data-10">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="six columns">
+            <button onclick="setInterval(function() {vm.step()}, 50)">Run</button>
+            <button onclick="vm.step()">Step</button>
+        </div>
+        <div class="six columns">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Program Counter:</th>
+                        <td id="pgmCtr">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            <h4>Output:</h4>
+            <pre><code id="bfOutput"> </code></pre>
+        </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+<script src="./scripts/BFVM.js"></script>
+<script src="./scripts/bfjs.js"></script>
+
+</html>

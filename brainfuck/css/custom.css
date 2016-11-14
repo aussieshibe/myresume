@@ -1,0 +1,9 @@
+textarea {
+    resize: vertical;
+    word-break: break-all;
+    height: 150px;
+}
+
+th, td {
+    padding: 10px;
+}

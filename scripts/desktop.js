@@ -8,6 +8,10 @@ $(document).ready(function(){
 	$( "#launcherHelpButton" ).click(function(){
 		createWindow("PDFViewer", {url: "../pages/resume.pdf"});
 	});
+	
+	$( "#brainfuckButton" ).click(function(){
+		createWindow("brainfuck");
+	});
 
 	initWindows();
 
@@ -18,18 +22,31 @@ function createWindow(windowType, windowVars){
 		case "PDFViewer":
 			createPDFViewerWindow(windowVars);
 			break;
+		case "brainfuck":
+			createBrainfuckWindow();
+			break;
 		default:
 			console.log("Error: tried to create unimplemented window type: " + windowType);
 	}
 }
 
 function createPDFViewerWindow(windowVars){
-	$.get("../windows/pdfViewerWindow.html", function(data){
+	$.get("./windows/pdfViewerWindow.html", function(data){
 		$( "#screen" ).append(data).promise().done(function(){
 			initWindows();
 		});
 	}).fail(function(){
 		console.log("Loading PDFViewer window from server failed. Are you running locally?");
+	});
+}
+
+function createBrainfuckWindow(){
+	$.get("./windows/brainfuck.html", function(data){
+		$( "#screen" ).append(data).promise().done(function() {
+			initWindows();
+		});
+	}).fail(function(){
+		console.log("Loading brainfuck window from server failed. Are you running locally?");
 	});
 }
 
